@@ -21,7 +21,7 @@ var sleep = function(mil) {
 };
 var lib = {
 	sleep_ms: sleep,
-	sleep_s: (s) => sleep(s*1000)
+	sleep_s: function(s) { return sleep(s*1000); }
 };
 tmfy.timeifyAll(lib);
 
