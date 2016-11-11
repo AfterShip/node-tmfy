@@ -1,7 +1,5 @@
 # tmfy
 
-[![Dependency Status](https://gemnasium.com/AfterShip/node-tmfy.svg)](https://gemnasium.com/AfterShip/node-tmfy)
-
 [![node](https://img.shields.io/node/v/tmfy.svg)]()
 [![npm](https://img.shields.io/npm/v/tmfy.svg)]()
 [![npm](https://img.shields.io/npm/l/tmfy.svg)]()
