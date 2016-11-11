@@ -1,18 +1,18 @@
-'use strict';
+var tmfy = require('./index');
 
-let tmfy = require('./index');
-
-let sleep = (mil) => new Promise(r => setTimeout(r, mil));
-let lib = {
+var sleep = function(mil) {
+	return new Promise(function (r) { setTimeout(r, mil) });
+};
+var lib = {
 	sleep_ms: sleep,
 	sleep_s: (s) => sleep(s*1000)
 };
 tmfy.timeifyAll(lib);
 
 lib.sleep_sTimeout(1000, 2) // timeout after 1000ms, sleep for 2s
-	.then(result => {
+	.then(function(result) {
 		console.log('sleep first');
 	})
-	.catch(error => {
+	.catch(function(error) {
 		console.log('timeout first');
 	});
