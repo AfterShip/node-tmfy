@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/tmfy.svg)]()
 [![npm](https://img.shields.io/npm/l/tmfy.svg)]()
 
-Timeouts for promises and profisified functions
+Timeouts for promises and promifisified functions
 ## Quick Start
 ```
 npm install tmfy

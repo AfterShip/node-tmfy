@@ -1,6 +1,6 @@
 {
   "name": "tmfy",
-  "description": "Timeouts for promises and profisified functions",
+  "description": "Timeouts for promises and promifisified functions",
   "version": "1.0.0",
   "homepage": "https://github.com/AfterShip/node-tmfy",
   "author": {
