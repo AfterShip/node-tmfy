@@ -33,9 +33,6 @@ lib.sleep_sTimeout(1000, 2) // timeout after 1000ms, sleep for 2s
 	});
 ```
 
-## Examples
-
-
 ## License
 Copyright (c) 2016 AfterShip
 
