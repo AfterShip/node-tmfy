@@ -4,10 +4,7 @@
 
 [![node](https://img.shields.io/node/v/tmfy.svg)]()
 [![npm](https://img.shields.io/npm/v/tmfy.svg)]()
-[![npm](https://img.shields.io/npm/dm/tmfy.svg)]()
 [![npm](https://img.shields.io/npm/l/tmfy.svg)]()
-
-![codecov.io](http://codecov.io/github/AfterShip/node-tmfy/branch.svg?branch=master)
 
 Timeouts for promises and profisified functions
 ## Quick Start
