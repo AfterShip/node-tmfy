@@ -11,7 +11,7 @@ npm install tmfy
 ```
 
 ```javascript
-'use strict'
+'use strict';
 
 let tmfy = require('tmfy');
 
@@ -47,7 +47,9 @@ If `handler` is set and have `emit()`, `error` event will be emitted on timeout 
 
 Returns a wrapped function around `func` which accepts `mil` as a first argument:
 ```javascript
-let funcTimeout = timeify(func);
+'use strict';
+let tmfy = require('tmfy');
+let funcTimeout = tmfy.timeify(func);
 funcTimeout(1000, ...); // runs `func` with 1000ms timeout
 ```
 
@@ -58,6 +60,8 @@ If `this` is set and have `emit()`, `error` event will be emitted on timeout (wi
 
 Extends `obj` with timeified versions of all functions. Adds 'Timeout' suffix to wrapped functions.
 ```javascript
+'use strict';
+let tmfy = require('tmfy');
 let obj = {
 	func: () => Promise.resolve('success')
 };
