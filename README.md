@@ -42,7 +42,7 @@ lib.sleep_sTimeout(1000, 2) // timeout after 1000ms, sleep for 2s
 Returns a Promise.
 - Resolves if `promise` is resolved before `mil`ms timeout. `promise` result is passed.
 - Rejects if `promise` is rejected before `mil`ms timeout. `promise` error is passed.
-- Rejects if `mil`ms timeout before `promise` is resolved or rejected.
+- Rejects with `new Error('TIMEOUT')` if `mil`ms timeout before `promise` is resolved or rejected.
 
 If `handler` is set and have `emit()`, `error` event will be emitted on timeout with `new Error('TIMEOUT')`.
 
