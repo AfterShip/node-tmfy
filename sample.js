@@ -1,18 +1,30 @@
 var tmfy = require('./index');
 
-var sleep = function(mil) {
-	return new Promise(function (r) { setTimeout(r, mil) });
-};
 var lib = {
-	sleep_ms: sleep,
-	sleep_s: function(s) { return sleep(s*1000); }
+    sendEmail: function(send_to) {
+        // need 200ms to send
+        return new Promise(function (r) { setTimeout(r, 200) });
+    },
+    sendEmailSlowly: function(send_to) {
+        // need 20000ms to send
+        return new Promise(function (r) { setTimeout(r, 20000) });
+    }
 };
+
 tmfy.timeifyAll(lib);
 
-lib.sleep_sTimeout(1000, 2) // timeout after 1000ms, sleep for 2s
-	.then(function(result) {
-		console.log('sleep first');
-	})
-	.catch(function(error) {
-		console.log('timeout first');
-	});
+lib.sendEmailTimeout(1000, 'me@apple.com') // timeout after 1000ms
+    .then(function(result) {
+        console.log('email sent');
+    })
+    .catch(function(error) {
+        // never called
+    });
+
+lib.sendEmailSlowlyTimeout(1000, 'me@apple.com') // timeout after 1000ms
+    .then(function(result) {
+        // never called
+    })
+    .catch(function(error) {
+        console.log('timeout first');
+    });
